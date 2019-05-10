@@ -15,16 +15,24 @@
     display: none;
 }
 
+.card-end {
+    margin-right: 0px !important;
+}
+
+.project-text {
+    max-width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /* 540px and smaller*/
 /* Have to be responsive card */
 @media (min-width: 0px) {
     .card {
         width: 100%;
-        margin-bottom: 10px; 
-     }
-    .card-not-end {
+        margin-bottom: 10px;
         margin-right: 0px;
-    }
+     }
 }
 
 /* 540px and smaller*/
@@ -42,11 +50,9 @@
 @media (min-width: 768px) {
     .card {
        width: 226px;
-       margin-bottom: 5px; 
+       margin-bottom: 5px;
+       margin-right: 5px; 
     }
-    .card-not-end {
-        margin-right: 5px;
-    } 
 }
 
 /* 960px */
@@ -55,28 +61,22 @@
     .card {
         width: 303px;
         margin-bottom: 10px;
-    }
-    .card-not-end {
         margin-right: 10px;
-    } 
+    }
 }
 
 @media print {
+    .project-text {
+        max-width: 720px;
+        margin-right: auto;
+        margin-left: auto;
+    }
     .pagebreak-before{
         page-break-before: always !important;
         break-before: always !important; 
     }
     .project-header-or-footer {
         display: none;
-    }
-  
-    .card-not-end {
-        margin-right: 0px;
-    }
-
-    .card {
-        width: 300px !important;
-        margin: 10px;
     }
 
     .print-portfolio {
