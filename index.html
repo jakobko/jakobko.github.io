@@ -25,6 +25,20 @@
             transform: scale(1.01);
             box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.2);
         }
+        .display-small {
+            display: block;
+        }
+        .display-large {
+            display: none;
+        }
+        @media (min-width: 576px) {
+            .display-small {
+                display: none;
+            }
+            .display-large {
+                display: block;
+            }
+        }
     </style>
 
     <!-- Notes
@@ -36,24 +50,40 @@
     <div class="container">
 
         <!-- Header -->
-        <div class="mt-5 text-center">
-            
-            <h2><a href="index.html" style="text-decoration: none; color: inherit;">Jakob Køhn</a></h2>
-            <p>post@jakobk.no</p>
-            
-            <p>
+        <div class="mt-5">
+            <div class="display-large">
+                <div class="row">
+                    <div class="col-sm">
+                        <a href="index.html" style="text-decoration: none; color: inherit;"><h2>Jakob Køhn</h2></a>
+                        <p class="ml-1">post@jakobk.no</p>  
+                    </div>
+                    <div class="col-sm text-right">
+                        <a href="https://github.com/jakobko" class="btn btn-light mr-2" role="button">
+                            <i class="fab fa-github-square mr-2"></i>GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/jakob-k%C3%B8hn-6a711131/" class="btn btn-light" role="button">
+                            <i class="fab fa-linkedin mr-2"></i>LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="display-small text-center">
+                <a href="index.html" style="text-decoration: none; color: inherit;"><h2>Jakob Køhn</h2></a>
+                <p class="ml-1">post@jakobk.no</p> 
+                
                 <a href="https://github.com/jakobko" class="btn btn-light mr-2" role="button">
                     <i class="fab fa-github-square mr-2"></i>GitHub
                 </a>
                 <a href="https://www.linkedin.com/in/jakob-k%C3%B8hn-6a711131/" class="btn btn-light" role="button">
                     <i class="fab fa-linkedin mr-2"></i>LinkedIn
                 </a>
-            </p>
+            </div>
         
         </div>
 
         <!-- Body -->
-        <div class="mt-5">
+        <div class="mt-3">
             <!-- Design section -->
             <div class="mt-3">
                 <hr>
