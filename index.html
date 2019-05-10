@@ -8,41 +8,18 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap.css">
 
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="customstylesheet.css">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     
     <!-- Window break -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Additional styling -->
-    <style>
-        .card {
-            margin: 10px;
-            width: 18rem;
-            transition: all .1s ease; 
-        }
-        .card:hover {
-            transform: scale(1.01);
-            box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.2);
-        }
-        .display-small {
-            display: block;
-        }
-        .display-large {
-            display: none;
-        }
-        @media (min-width: 576px) {
-            .display-small {
-                display: none;
-            }
-            .display-large {
-                display: block;
-            }
-        }
-    </style>
-
-    <!-- Notes
-        Thumbnails are 300 x 185 pixels.
+    <!--
+        Notes:
+        Thumbnail images are 520 x 422 px.
     -->
 </head>
 
@@ -92,65 +69,68 @@
                 
                 <!-- Card container for design projects -->
                 <div class="d-flex" style="flex-flow: row wrap; justify-content: center;">
-                    <a href="design/medusoza/medusoza.html" style="text-decoration: none; color: inherit;">
-                        <div class="card">
-                                <img src="design/medusoza/medusoza_thumbnail.png" class="card-img-top" alt="An image showing a blue jellyfish-like structure">
-                                <div class="card-body">
-                                    <h5 class="card-title">Medusoza</h5>
-                                    <h6 class="card-subtitle mb-2 text-muted">Somaesthetic interaction design</h6>
-                                </div>
-                            </div>
-                    </a>
-                    
-                    <div class="card">
-                            <img src="design/pakkuman/pakkuman_thumbnail.png" class="card-img-top" alt="An image showing a blue jellyfish-like structure">
-                            <div class="card-body">
-                                <h5 class="card-title">Pakkuman</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Tangible interaction</h6>
-                            </div>
+
+                    <!-- Row 1 -->
+                    <a href="design/medusoza/medusoza.html" class="card card-not-end" style="text-decoration: none; color: inherit;">
+                        <img src="design/medusoza/medusoza_thumbnail.png" class="card-img-top" alt="An image showing a blue jellyfish-like structure">
+                        <div class="card-body">
+                            <h5 class="card-title">Medusoza</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Somaesthetic interaction design</h6>
                         </div>
-                    <div class="card">
+                    </a>
+                    <a href="design/medusoza/medusoza.html" class="card card-not-end" style="text-decoration: none; color: inherit;">
+                        <img src="design/pakkuman/pakkuman_thumbnail.png" class="card-img-top" alt="An image showing a blue jellyfish-like structure">
+                        <div class="card-body">
+                            <h5 class="card-title">Pakkuman</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Tangible interaction</h6>
+                        </div>
+                    </a>
+                    <a href="design/medusoza/medusoza.html" class="card" style="text-decoration: none; color: inherit;">
                         <img src="design/listenas/listenas_thumbnail.png" class="card-img-top" alt="Listen AS logo">
                         <div class="card-body">
                             <h5 class="card-title">Listen AS</h5>
                             <h6 class="card-subtitle mb-2 text-muted">UX design intern</h6>
                         </div>
-                    </div>
-                    <div class="card">
+                    </a>
+
+                    <!-- Row 2 -->
+                    <a href="design/medusoza/medusoza.html" class="card card-not-end" style="text-decoration: none; color: inherit;">
                         <img src="design/output1and2/output1and2_thumbnail.png" class="card-img-top" alt="Image displaying Output 1 and 2 magazine">
                         <div class="card-body">
                             <h5 class="card-title">Output no. 1 and 2</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Magazine design</h6>
                         </div>
-                    </div>
-                    <div class="card">
+                    </a>
+                    <a href="design/medusoza/medusoza.html" class="card card-not-end" style="text-decoration: none; color: inherit;">
                         <img src="design/greenphones/greenphones_thumbnail.png" class="card-img-top" alt="A screencap of the proposed design for Greenphones">
                         <div class="card-body">
                             <h5 class="card-title">Greenphones</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Website design</h6>
                         </div>
-                    </div>
-                    <div class="card">
+                    </a>
+                    <a href="design/medusoza/medusoza.html" class="card" style="text-decoration: none; color: inherit;">
                         <img src="design/shifter/shifter_thumbnail.png" class="card-img-top" alt="The Shifter logo">
                         <div class="card-body">
                             <h5 class="card-title">Shifter</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Website design</h6>
                         </div>
-                    </div>
-                    <div class="card">
+                    </a>
+
+                    <!-- Row 3 -->
+                    <a href="design/medusoza/medusoza.html" class="card card-not-end" style="text-decoration: none; color: inherit;">
                         <img src="design/marbletower/marbletower_thumbnail.png" class="card-img-top" alt="An image showing the marble tower">
                         <div class="card-body">
                             <h5 class="card-title">Marble tower</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Interaction design</h6>
                         </div>
-                    </div>
-                    <div class="card">
+                    </a>
+                    <a href="design/medusoza/medusoza.html" class="card" style="text-decoration: none; color: inherit;">
                         <img src="design/railways/railways_thumbnail.png" class="card-img-top" alt="An image displaying an smartphone application prototype">
                         <div class="card-body">
                             <h5 class="card-title">Railways</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Application design</h6>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             
@@ -181,70 +161,3 @@
 </body>
 
 </html>
-
-<!-- Backup -->
-<!--
-<div class="card">
-                        <img src="design/medusoza/medusoza_thumbnail.png" class="card-img-top" alt="An image showing a blue jellyfish-like structure">
-                        <div class="card-body">
-                            <h5 class="card-title">Medusoza</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Somaesthetic interaction design</h6>
-                            <p class="card-text"><small class="text-muted">January 2019 - February 2019</small></p>
-                            <p class="card-text">This was a school project were we explored different ways of creating a somaesthetic experience through various prototypes. My group created a jellyfish-like structure that would move up and down as the user sitting inside breathed air into a sensor.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="design/listenas/listenas_thumbnail.png" class="card-img-top" alt="Listen AS logo">
-                        <div class="card-body">
-                            <h5 class="card-title">Listen AS</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">UX design intern</h6>
-                            <p class="card-text"><small class="text-muted">June 2018 - August 2018</small></p>
-                            <p class="card-text">Listen AS creates a physical electronic product where important properties were product design, comfort and ease of use. I participated in understanding the user and defining changes for the prototypes.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="design/output1and2/output1and2_thumbnail.png" class="card-img-top" alt="Image displaying Output 1 and 2 magazine">
-                        <div class="card-body">
-                            <h5 class="card-title">Output no. 1 and 2</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Magazine design</h6>
-                            <p class="card-text"><small class="text-muted">May 2017 - April 2018</small></p>
-                            <p class="card-text">I was responsible for publishing Output, a magazine targeting students at the Department of Informatics, University of Oslo. I did additional work as a writer, photographer and layout designer.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="design/greenphones/greenphones_thumbnail.png" class="card-img-top" alt="A screencap of the proposed design for Greenphones">
-                        <div class="card-body">
-                            <h5 class="card-title">Greenphones</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Website design</h6>
-                            <p class="card-text"><small class="text-muted">August 2016 - December 2016</small></p>
-                            <p class="card-text">This was a school project where our team collaborated with the phone resale company Greenphones and the research organization SINTEF.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="design/shifter/shifter_thumbnail.png" class="card-img-top" alt="The Shifter logo">
-                        <div class="card-body">
-                            <h5 class="card-title">Shifter</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Website design</h6>
-                            <p class="card-text"><small class="text-muted">January 2017</small></p>
-                            <p class="card-text">Hired by Shifter.no to create some design layouts for their article pages.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="design/marbletower/marbletower_thumbnail.png" class="card-img-top" alt="An image showing the marble tower">
-                        <div class="card-body">
-                            <h5 class="card-title">Marble tower</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Interaction design</h6>
-                            <p class="card-text"><small class="text-muted">January 2016 - June 2016</small></p>
-                            <p class="card-text">This was a school project where our task was to find a user group, define any challenges for that user group, and solve these with interaction design.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="design/railways/railways_thumbnail.png" class="card-img-top" alt="An image displaying an smartphone application prototype">
-                        <div class="card-body">
-                            <h5 class="card-title">Railways</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Application design</h6>
-                            <p class="card-text"><small class="text-muted">...</small></p>
-                            <p class="card-text">This was a school project in user centered design. I created a simple app wireframe which could be used to gather user-information through Wizard of Oz and A/B testing.</p>
-                        </div>
-                    </div>
--->
