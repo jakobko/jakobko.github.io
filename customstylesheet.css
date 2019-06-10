@@ -1,5 +1,5 @@
-@font-face { font-family: JakobsHand; src: url('JakobsHand-Regular.otf'); } 
+@font-face { font-family: Optima; src: url('OPTIMA.TTF'); } 
 
 h1, h2, h3, p {
-    font-family: JakobsHand;
+    font-family: Optima;
 }
