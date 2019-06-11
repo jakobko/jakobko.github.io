@@ -1,5 +1,5 @@
-@font-face { font-family: Optima; src: url('OPTIMA.TTF'); } 
+@font-face { font-family: Baskerville; src: url('BASKE1.ttf'); } 
 
 h1, h2, h3, p {
-    font-family: Optima;
+    font-family: Baskerville;
 }
