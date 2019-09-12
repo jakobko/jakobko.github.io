@@ -3,3 +3,7 @@
 h1, h2, h3, h4, p {
     font-family: Lato-regular;
 }
+
+.introtext {
+    line-height: 1.6;
+}
