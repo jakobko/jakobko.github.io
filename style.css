@@ -240,6 +240,14 @@ a:hover {
 
 @media (max-width: 440px) {
 
+  #border-t, #border-b, #border-l, #border-r {
+    display: none;
+  }
+
+  body {
+    padding: 0 20px 0;
+}
+
   .utvalgt-prosjekt-boks {
     margin-right: 40px;
     margin-left: 40px;
