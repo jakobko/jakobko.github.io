@@ -246,7 +246,12 @@ a:hover {
 
   body {
     padding: 0 20px 0;
-}
+  }
+
+  #sjekk-ut {
+    position: absolute;
+    bottom: 20px;
+  }
 
   .utvalgt-prosjekt-boks {
     margin-right: 40px;
