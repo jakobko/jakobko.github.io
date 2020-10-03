@@ -134,7 +134,7 @@ a:hover {
 
 #title {
   margin-bottom: 40px;
-  max-width: 1024px;
+  max-width: 1161px;
   /*position: absolute;*/
 }
 
@@ -149,7 +149,7 @@ a:hover {
 }
 
 #prosjekt-container {
-  max-width: 1024px;
+  max-width: 1161px;
   display: flex;
   flex-flow: wrap;
   justify-content: center;
