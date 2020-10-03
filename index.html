@@ -1,189 +1,87 @@
 <!DOCTYPE html>
-<html style="height: 100%;">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Lora:wght@400;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="script.js"></script> 
     <title>Jakob Køhn</title>
-    <meta name="description" content="This is a portfolio website displaying various design projects I've been involved in: UX design, website design, somaesthetic design, tangible interaction, and magazine design.">
-
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/Projects-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-    <script src="jakobskriver.js"></script>
-    <script>
-    var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
-    function init() {
-    	canvas = document.getElementById("canvas");
-    	anim_container = document.getElementById("animation_container");
-    	dom_overlay_container = document.getElementById("dom_overlay_container");
-    	var comp=AdobeAn.getComposition("CE62031A4A7D0145B7CE366EF72A990B");
-    	var lib=comp.getLibrary();
-    	var loader = new createjs.LoadQueue(false);
-    	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
-    	loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
-    	var lib=comp.getLibrary();
-    	loader.loadManifest(lib.properties.manifest);
-    }
-    function handleFileLoad(evt, comp) {
-    	var images=comp.getImages();
-    	if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }
-    }
-    function handleComplete(evt,comp) {
-    	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
-    	var lib=comp.getLibrary();
-    	var ss=comp.getSpriteSheet();
-    	var queue = evt.target;
-    	var ssMetadata = lib.ssMetadata;
-    	for(i=0; i<ssMetadata.length; i++) {
-    		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
-    	}
-    	exportRoot = new lib.jakobskriver();
-    	stage = new lib.Stage(canvas);
-    	//Registers the "tick" event listener.
-    	fnStartAnimation = function() {
-    		stage.addChild(exportRoot);
-    		createjs.Ticker.setFPS(lib.properties.fps);
-    		createjs.Ticker.addEventListener("tick", stage);
-    	}
-    	//Code to support hidpi screens and responsive scaling.
-    	AdobeAn.makeResponsive(false,'both',false,1,[canvas,anim_container,dom_overlay_container]);
-    	AdobeAn.compositionLoaded(lib.properties.id);
-    	fnStartAnimation();
-    }
-    </script>
 </head>
+<body>
+    <div id="border-t"></div><div id="border-b"></div>
+    <div id="border-l"></div><div id="border-r"></div>
+    
+    <div class="flex-container">
+        <div id="intro" class="panel" data-color="blue0">
+            <h1 id="title"><span class="text-dark">Hei, jeg heter</span> Jakob <span class="text-dark">og jeg jobber som</span> designer <span class="text-dark">i</span> Making Waves<span class="text-dark">.</span></h1>
+            <a id="sjekk-ut" href="#prosjekter"><img src="bilder/sjekk-ut.svg" alt="Sjekk ut noen av prosjektene jeg har jobber med."></a> 
+        </div>
+        
+        <div id="prosjekter" class="panel" data-color="blue1">
+            <div id="prosjekt-container"> 
+                <div class="prosjekt-boks" style="background-color: #FFD0D0;">
+                    <img id="prosjekt-bilde" src="bilder/ikoner/ikon-stemmeassitent.svg" alt="">
+                    <h3>Stemmeassistent</h3>
+                    <h4>· Ruter (Making Waves)</h4>
+                    <p>I dette prosjektet var jeg med å designe en stemmeassistent som gir reiseinformasjon fra Ruter. Arbeidet er gjort for Ruter gjennom en sommerjobb hos Making Waves.</p>
+                </div>
 
-<body onload="init();" style="background-color: #c4e58e;height: 100%; margin:0px;">
-    <div class="container" style="display: flex;align-items: center;justify-content: center;height: 100%;">
-        <div class="row">
-            <div class="col text-center">
-                <div id="animation_container" style="background-color:rgba(255, 255, 255, 0.00); width:321px; height:321px; margin: auto;">
-                    <canvas id="canvas" width="321" height="321" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
-                    <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:321px; height:321px; position: absolute; left: 0px; top: 0px; display: block;">
+                <div class="prosjekt-boks" style="background-color: #FFE7D0;">
+                    <img id="prosjekt-bilde" src="bilder/ikoner/ikon-earbuds.svg" alt="">
+                    <h3>Lydforsterkende ørepropper</h3>
+                    <h4>· Listen AS</h4>
+                    <p>Jeg var med på designe et par trådløse ørepropper som forsterker omgivelseslyd, ment som et alternativ til tradisjonelle høreapparater. Arbeid gjort for oppstartsbedriften Listen AS.</p>
+                </div>
+
+                <div class="prosjekt-boks" style="background-color: #FEFFD0;">
+                    <img id="prosjekt-bilde" src="bilder/ikoner/ikon-masteroppgave.svg" alt="">
+                    <h3>Masteroppgave</h3>
+                    <h4>· Skoleprosjekt</h4>
+                    <p>Her lagde vi flere nettsideprototyper for å forstå og forenkle prosessen med å finne og velge et digitalt verktøy til et oppgaveområde.</p>
+                </div>
+
+                <div class="prosjekt-boks" style="background-color: #E2FFD0;">
+                    <img id="prosjekt-bilde" src="bilder/ikoner/ikon-output.svg" alt="">
+                    <h3>Output nr. 1 og 2</h3>
+                    <h4>· Frivillig arbeid</h4>
+                    <p>Avsvarlig for å gi ut og designe Output, et fysisk studentmagasin som blir gitt ut to ganger i året. Skrevet av og for studenter ved Institutt for Informatikk, Universitetet i Oslo.</p>
+                </div>
+
+                <div class="prosjekt-boks" style="background-color: #D0FFDA;">
+                    <img id="prosjekt-bilde" src="bilder/ikoner/ikon-medusozoa.svg" alt="">
+                    <h3>Medusozoa</h3>
+                    <h4>· Skoleprosjekt</h4>
+                    <p>En manet-inspirert installasjon som utforsket hvordan somaestetisk design kan sammarbeide med kroppslige sensasjoner.</p>
+                </div>
+                
+                <div class="prosjekt-boks" style="background-color: #D0FFF4;">
+                    <img id="prosjekt-bilde" src="bilder/ikoner/ikon-pakkuman.svg" alt="">
+                    <h3>Pakkuman</h3>
+                    <h4>· Skoleprosjekt</h4>
+                    <p>En kulebanelabyrint hvor god øye-hånd koordinasjon kreves for å balansere en klinkekule over sensorer og samle grønne lys.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="om-meg" class="panel" data-color="blue2">
+                <div id="om-meg-container">
+                    <div id ="pil-og-bilde-boks">
+                        <img id="meg-pil" src="bilder/dette-er-meg.svg" alt="Dette er meg.">
+                        <img id="om-meg-bilde" src="bilder/jakob-bilde-small.png" alt="Et porttrett av Jakob.">
                     </div>
-                  </div>
-            </div>
-            <div class="col d-flex flex-column justify-content-center" style="min-width: 333px;">
-                <h1 id="top-header-margin">Hello!</h1>
-                <p>This is me Jakob. I like to explore different ways of being creative and solve everyday problems. Take a look at my <a href="#portfolio">portfolio</a>, or check out the stuff I've done on <a target="blank" href="https://github.com/jakobko">GitHub</a> and <a target="blank" href="https://www.linkedin.com/in/jakob-k%C3%B8hn-6a711131/">LinkedIn</a>.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" id="portfolio" style="margin-bottom: 15%;">
-        <div class="row" style="margin-top: -10%;margin-bottom: 10%;"></div>
-
-        <div class="row d-flex" id="portfolio-element" style="padding: 0;">
-            <div class="col d-md-flex align-items-md-center">
-                <img class="img-fluid" src="assets/img/rutermakingwaves.jpg" style="min-width: 240px;">
-            </div>
-            <div class="col-1 d-flex flex-column justify-content-center" id="feature-project-text">
-                <h3 id="top-header-margin">Ruter voice assistant</h3>
-                <small>Conversation design, summer 2019</small>
-                <p style="margin-top: 20px;">A voice assistant that gives departure and travel suggestions based on information from the public transport provider Ruter. Work done through a summer internship in Making Waves.</p>
-                <a>* This page is under construction.</a></div>
+                    
+                    <p id="om-meg-tekst">Jeg liker å designe for gode vennskap mellom mennesker og teknologi. Ellers liker jeg å tenke ut finurlige brettspill og sy kjøkkenforkler.</p>
+                </div>
         </div>
 
-        <div class="row flex-wrap-reverse d-flex" id="portfolio-element" style="margin-top: 15%;">
-            <div class="col-1 d-flex flex-column justify-content-center" id="feature-project-text">
-                <h3 id="top-header-margin">Medusozoa</h3>
-                <small>Somaesthetic design, spring 2019</small>
-                <p style="margin-top: 20px;">Exploring how somaesthetic design can cooperate with bodily sensations, we created this jelly-fish inspired installation. Gently bobbing up and down as the user breathes air into "bubbles" located inside the Medusozoa.</p>
-                <a href="medusozoa.html">See project page</a></div>
-            <div class="col d-md-flex justify-content-center align-items-md-center">
-                <img class="img-fluid" src="assets/img/medusozoa.jpg" style="min-width: 240px;">
-            </div>
-        </div>
 
-        <div class="row" style="margin-top: 15%;">
-            <div class="col" style="min-width: 360px;">
-                <img class="img-fluid" src="assets/img/pakkuman.jpg" style="min-width: 240px;">
-                <h3 style="margin-top: 15px;">Pakkuman</h3>
-                <small>Tangible interaction, spring 2019</small>
-                <p style="margin-top: 20px;">Pakkuman is a marble maze where good eye-hand coordination is required to balance the marble over the sensors, and collect the different green lights.<br></p>
-                <a>* This page is under construction.</a>
-            </div>
-            <div class="col" id="right-column" style="min-width: 360px;">
-                <img class="img-fluid" src="assets/img/dhis.jpg" style="min-width: 240px;">
-                <h3 id="top-header-margin" style="margin-top: 15px;">Commodity dispensing application for District Health Information Software 2 (DHIS2)</h3>
-                <small>Interaction design, autumn 2018</small>
-                <p style="margin-top: 20px;">Worked as a designer in creating a simple commodity dispenser application that health workers can use through DHIS2. DHIS2 is used in more than 60 countries, and the core development activities of the DHIS 2 platform are coordinated by the Department of Informatics at the Univesity of Oslo.<br></p>
-                <a>* This page is under construction.</a>
-            </div>
+        <div class="panel" data-color="blue3">
+            <h1 id="title">Sjekk ut andre ting jeg har gjort på <a href="https://www.linkedin.com/in/jakob-k%C3%B8hn-6a711131/" target="_blank" rel="noopener noreferrer">LinkedIn</a>, <a href="https://medium.com/@jakobkohn" target="_blank" rel="noopener noreferrer">Medium</a> og <a href="https://unsplash.com/@jakobkohn" target="_blank" rel="noopener noreferrer">Unsplash</a>, eller send meg gjerne en <a href="mailto:jakobk@jakobk.no">e-post</a>!</h1>
         </div>
-
-        <div class="row" style="margin-top: 15%;">
-            <div class="col" style="min-width: 360px;">
-                <img class="img-fluid" src="assets/img/listenas.jpg" style="min-width: 240px;">
-                <h3 style="margin-top: 15px;">Environment sound enhancing earbuds</h3>
-                <small>Interaction design, summer 2018</small>
-                <p style="margin-top: 20px;">A pair of earbuds that can enhance different sounds like ambience and human voices. Purposed as an alternative to hearing aids. Work done through a summer internship in the startup Listen AS.</p>
-                <a>* This page is under construction.</a>
-            </div>
-            <div class="col" id="right-column" style="min-width: 360px;">
-                <img class="img-fluid" src="assets/img/output1and2.jpg" style="min-width: 240px;">
-                <h3 id="top-header-margin" style="margin-top: 15px;">Output issue 1 and 2</h3>
-                <small>Magazine design, autumn 2017 and spring 2018</small>
-                <p style="margin-top: 20px;">Participated in founding and designing Output, a students publication for the Department of Informatics, University of Oslo.</p>
-                <a>* This page is under construction.</a>
-            </div>
-        </div>
-
-        <div class="row" style="margin-top: 15%;">
-            <div class="col" style="min-width: 360px;">
-                <img class="img-fluid" src="assets/img/shifter.jpg" style="min-width: 240px;">
-                <h3 style="margin-top: 15px;">Layout for a digitial article</h3>
-                <small>Website design, spring 2017</small>
-                <p style="margin-top: 20px;">Two different article layouts for the digital news channel Shifter, who focuses on startups and entrepreneurship within technology.</p>
-                <a>* This page is under construction.</a>
-            </div>
-            <div class="col" id="right-column" style="min-width: 360px;">
-                <img class="img-fluid" src="assets/img/greenphones.jpg" style="min-width: 240px;">
-                <h3 id="top-header-margin" style="margin-top: 15px;">Greenphones website</h3>
-                <small>Website design, autumn 2016</small>
-                <p style="margin-top: 20px;">Participated in designing a new website for Greenphones, a company that buy, sell, and repair used phones. In collaboration with Greenphones and SINTEF.</p>
-                <a>* This page is under construction.</a>
-            </div>
-        </div>
-
-        <div class="row" style="margin-top: 15%;">
-            <div class="col" style="min-width: 360px;">
-                <img class="img-fluid" src="assets/img/marbletrack.jpg" style="min-width: 240px;">
-                <h3 style="margin-top: 15px;">Marble clock tower</h3>
-                <small>Interaction design, spring 2016</small>
-                <p style="margin-top: 20px;">A clock tower where it is possible to load marbles into the magazine located at the top. When the user presses the start button, each marble will dispense at a five minute interval, rolling in tracks around the wooden tower.</p>
-                <a>* This page is under construction.<br></a></div>
-            <div
-                class="col" id="right-column" style="min-width: 360px;">
-                <img class="img-fluid" src="assets/img/railways.jpg" style="min-width: 240px;">
-                <h3 id="top-header-margin" style="margin-top: 15px;">Railways</h3>
-                <small>Application design wireframe, autumn 2015</small>
-                <p style="margin-top: 20px;">A wireframe for an application that makes it easier to order train tickets from different providers when planning a trip through Europe.</p>
-                <a>* This page is under construction.</a>
-            </div>
-        </div>
-
-        <!--- Activate this for single column end -->
-        <!--
-        <div class="row" style="margin-top: 15%;">
-                <div class="col" id="single-column" style="min-width: 360px;"><img class="img-fluid" src="assets/img/vlcsnap-2017-10-12-18h46m34s225.jpg" style="min-width: 240px;">
-                <h3 style="margin-top: 15px;">Marble clock tower</h3>
-                <small>Interaction design, spring 2016</small>
-                <p style="margin-top: 20px;">A clock tower where it is possible to load marbles into the magazine located at the top. When&nbsp;the user presses the start button, each marble will dispense at a five minute interval, rolling in tracks around the wooden tower.</p>
-                <a>* This page is under construction.</a>
-            </div>
-        </div>
-        -->
         
     </div>
     
-    <img src="assets/img/mountains.svg">
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
-
 </html>
