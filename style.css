@@ -231,6 +231,14 @@ a:hover {
   font-size: 18pt;
 }
 
+@media (min-width: 1600px) {
+  #title {
+    margin-bottom: 40px;
+    max-width: 1161px;
+    font-size: 72pt;
+  }
+}
+
 @media (max-width: 720px) {
   #title {
     margin-bottom: 40px;
