@@ -1,3 +1,4 @@
+/*
 $(window).on('scroll', function() {
     var element_position = $('#scroll-mark').offset().top;
     var header = $(".header-first");
@@ -20,3 +21,4 @@ function menuOpen() {
 
     menu.style.display = "flex";
 }
+*/
